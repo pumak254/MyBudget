@@ -7,11 +7,22 @@
     tools:context="com.example.ccacc.mybudget.BudgetSheetActivity">
 
     <LinearLayout
-        android:layout_width="368dp"
-        android:layout_height="495dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/linearLayout">
 
         <TextView
             android:id="@+id/title"
@@ -19,23 +30,26 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Jan 1 - Jan 28 Budget Sheet" />
+
     </LinearLayout>
 
-    <GridLayout
+    <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp">
+        android:layout_weight="1"
+        app:layout_constraintRight_toLeftOf="@+id/linearLayout"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout">
 
         <ListView
             android:id="@+id/categories"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
-
-        <ListView
-            android:id="@+id/budget"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </GridLayout>
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

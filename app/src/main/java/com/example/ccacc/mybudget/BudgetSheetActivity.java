@@ -20,5 +20,8 @@ public class BudgetSheetActivity extends AppCompatActivity {
         ListView catList = (ListView) findViewById(R.id.categories);
         catList.setAdapter(catAdapter);
 
+        //ListAdapter budgetAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, budget);
+        //ListView budgetList = (ListView) findViewById(R.id.budget);
+        //budgetList.setAdapter(budgetAdapter);
     }
 }
